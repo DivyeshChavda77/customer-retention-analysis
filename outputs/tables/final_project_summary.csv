@@ -1,0 +1,7 @@
+Metric,Value
+Total Customers,10000.0
+Retained Customers,7963.0
+Churned Customers,2037.0
+Retention Rate (%),79.63
+Churn Rate (%),20.37
+High-Balance Threshold,127644.24
