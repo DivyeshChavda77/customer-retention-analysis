@@ -210,9 +210,9 @@ Customer-Retention-Analytics/
 │   └── tables/
 │
 ├── report/
-│   ├── research_paper.docx
-│   └── executive_summary.docx
+│   ├── project_report.docx
 │
+├── .gitignore
 ├── requirements.txt
 ├── README.md
 └── .venv/
