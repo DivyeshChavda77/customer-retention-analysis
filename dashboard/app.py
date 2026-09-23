@@ -88,25 +88,15 @@ def style_chart(fig):
             size=12
         ),
 
-        title=dict(
-            font=dict(
-                size=18,
-                color="#F8FAFC"
-            ),
-            x=0
-        ),
-
         xaxis=dict(
             title_font=dict(
                 size=12,
                 color="#CBD5E1"
             ),
-
             tickfont=dict(
                 size=11,
                 color="#94A3B8"
             ),
-
             gridcolor="#273449",
             zeroline=False
         ),
@@ -116,12 +106,10 @@ def style_chart(fig):
                 size=12,
                 color="#CBD5E1"
             ),
-
             tickfont=dict(
                 size=11,
                 color="#94A3B8"
             ),
-
             gridcolor="#273449",
             zeroline=False
         ),
@@ -129,7 +117,7 @@ def style_chart(fig):
         margin=dict(
             l=50,
             r=30,
-            t=65,
+            t=15,
             b=50
         ),
 
@@ -421,7 +409,6 @@ fig_engagement = px.bar(
     x="EngagementStatus",
     y="ChurnRate",
     text="ChurnRate",
-    title="Churn Rate by Customer Engagement",
     labels={
         "EngagementStatus": "Engagement Status",
         "ChurnRate": "Churn Rate (%)"
@@ -489,7 +476,6 @@ fig_product = px.bar(
     x="NumOfProducts",
     y="ChurnRate",
     text="ChurnRate",
-    title="Churn Rate by Number of Products",
     labels={
         "NumOfProducts": "Number of Products",
         "ChurnRate": "Churn Rate (%)"
@@ -560,7 +546,6 @@ fig_heatmap = px.imshow(
     heatmap_pivot,
     text_auto=".2f",
     aspect="auto",
-    title="Churn Rate by Product Category and Engagement",
     labels={
         "x": "Engagement Status",
         "y": "Product Category",
@@ -855,7 +840,6 @@ fig_risk = px.bar(
     x="RiskCategory",
     y="CustomerCount",
     text="CustomerCount",
-    title="Customers by Retention Risk Category",
     labels={
         "RiskCategory": "Risk Category",
         "CustomerCount": "Number of Customers"
@@ -1007,7 +991,6 @@ fig_relationship = px.bar(
     x="RelationshipStrengthCategory",
     y="CustomerCount",
     text="CustomerCount",
-    title="Customer Distribution by Relationship Strength",
 
     labels={
         "RelationshipStrengthCategory":
@@ -1070,7 +1053,6 @@ fig_relationship_churn = px.bar(
     x="RelationshipStrengthCategory",
     y="ChurnRate",
     text="ChurnRate",
-    title="Historical Churn Rate by Relationship Strength",
     labels={
         "RelationshipStrengthCategory":
             "Relationship Strength",
