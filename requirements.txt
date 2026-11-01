@@ -2,7 +2,7 @@ pandas
 numpy
 matplotlib
 seaborn
-plotly
-streamlit
+plotly>=5.24
+streamlit>=1.66
 openpyxl
 jupyter

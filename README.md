@@ -216,3 +216,38 @@ Customer-Retention-Analytics/
 ├── requirements.txt
 ├── README.md
 └── .venv/
+
+---
+
+## Dashboard Redesign (Premium SaaS UI)
+
+The Streamlit dashboard now has an enterprise analytics look. **All business
+logic is unchanged** and still comes from `src/` (`analysis.py`, `kpi.py`,
+`scoring.py`, `data_cleaning.py`).
+
+- Dark / Light theme switcher (header + sidebar); the choice survives navigation and reloads (`?theme=`)
+- Sidebar navigation: Overview, Engagement & Products, High-Value Customers, Risk Analysis, Relationship Strength, Customer Segments
+- Animated KPI cards (pure CSS count-up); trend chips compare the filtered selection with all customers and only appear when filters narrow the data
+- Interactive Plotly charts themed for both modes, custom tooltips with customer counts
+- Responsive layout (desktop, laptop, tablet, mobile), "Reset filters" button
+
+### Run
+
+```bash
+pip install -r requirements.txt
+streamlit run dashboard/app.py      # run from the project root
+```
+
+Tested with Streamlit 1.66 (`.streamlit/config.toml` supplies the base dark theme colours).
+
+### UI code layout
+
+```text
+dashboard/
+├── app.py            # pages, filters, data flow
+├── style.css         # all styling, driven by CSS variables
+└── ui/
+    ├── theme.py      # dark/light tokens + CSS injection
+    ├── components.py # KPI cards, headers, callouts, icons
+    └── charts.py     # Plotly chart builders
+```
